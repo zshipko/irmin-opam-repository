@@ -58,6 +58,7 @@ depend on external C stubs; it aims to run everywhere, from Linux,
 to browsers and Xen unikernels.
 """
 x-maintenance-intent: [ "(latest)" ]
+
 url {
   src:
     "https://github.com/mirage/irmin/archive/refs/heads/eio.tar.gz"
@@ -66,4 +67,3 @@ url {
     "sha512=47a79ca7f515565c44a711dd9ec4ea763ab199105c29c21da2d614755753546971a00a1200e6bac2ab528c545db34ca90be6dd1db8fe9d785d26363d0a1bbbc7"
   ]
 }
-
