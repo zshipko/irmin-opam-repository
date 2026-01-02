@@ -1,0 +1,35 @@
+opam-version: "2.0"
+maintainer: "Craig Ferguson <craig@tarides.com>"
+author: "Craig Ferguson <craig@tarides.com>"
+homepage: "https://github.com/mirage/irmin"
+bug-reports: "https://github.com/mirage/irmin/issues"
+license: "ISC"
+dev-repo: "git+https://github.com/mirage/irmin.git"
+
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+
+depends: [
+  "ocaml" {>= "4.10.0"}
+  "dune" {>= "3.5.0"}
+  "ppx_repr" {>= "0.2.0"}
+  "ppxlib" {>= "0.12.0"}
+  "logs" {>= "0.5.0"}
+  "fmt" {with-test & >= "0.8.0"}
+  "bisect_ppx" {dev & >= "2.5.0"}
+]
+
+synopsis: "PPX deriver for Irmin type representations"
+x-maintenance-intent: [ "(latest)" ]
+url {
+  src:
+    "https://github.com/mirage/irmin/archive/refs/heads/eio.tar.gz"
+  checksum: [
+    "sha256=3e0a728327ec16fc6cd07f4b1bbe59a74fafa977deddaac88f136b62cf73a353"
+    "sha512=47a79ca7f515565c44a711dd9ec4ea763ab199105c29c21da2d614755753546971a00a1200e6bac2ab528c545db34ca90be6dd1db8fe9d785d26363d0a1bbbc7"
+  ]
+}
+
